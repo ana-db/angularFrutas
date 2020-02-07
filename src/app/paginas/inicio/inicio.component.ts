@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  title: string;
 
+  constructor() { 
+
+    console.trace('InicioComponent constructor');
+
+    this.title = "Frutas";
+
+  } //fin constructor
+
+  
   ngOnInit() {
-  }
+    console.trace('InicioComponent ngOnInit');
+  } //fin constructor
 
-}
+} //InicioComponent

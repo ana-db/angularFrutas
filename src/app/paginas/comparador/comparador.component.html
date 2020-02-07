@@ -1,2 +1,37 @@
 <h2>Comparador frutas</h2>
 
+<div class="row">
+    <div class="col">
+        <h2>Lista de frutas</h2>
+        <ol>
+            <li *ngFor="let fruta of frutas"
+                (click)="seleccionarFruta(fruta)">
+                {{fruta.nombre}}
+                <!-- 
+                <div class="card" style="width: 18rem;">
+                    <img src="{{fruta.foto}}" class="card-img-top" alt="{{fruta.nombre}}">
+                    <div class="card-body">
+                      <h5 class="card-title">{{fruta.nombre}}</h5>
+                      <p class="card-text">{{fruta.descripcion}}</p>
+                    </div>
+                  </div>
+                 -->
+            </li>
+        </ol>
+    </div>
+
+    <div class="col">
+        <h2>{{fruta1.nombre}}</h2>
+        <img src="{{fruta1.foto}}" class="card-img-top" alt="{{fruta1.nombre}}">
+        <span>{{fruta1.clasificacion}}</span><br>
+        {{fruta1.precio}}
+        <span class="badge badge-{{ (fruta1.precio > fruta2.precio)?'danger':'success'}}">{{fruta1.precio - fruta2.precio}}</span><br>
+    </div>
+    
+    <div class="col">
+        <h2>{{fruta2.nombre}}</h2>
+        <img src="{{fruta2.foto}}" class="card-img-top" alt="{{fruta2.nombre}}">
+        <span>{{fruta2.clasificacion}}</span><br>
+        {{fruta2.precio}} <span class="badge badge-{{ (fruta2.precio > fruta1.precio)?'danger':'success'}}">{{fruta2.precio - fruta1.precio}}</span><br>
+    </div>
+</div>

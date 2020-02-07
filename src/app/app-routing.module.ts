@@ -10,6 +10,19 @@ const routes: Routes = [
   {path: 'comparador', component: ComparadorComponent},
 ];
 
+
+export const RUTAS =  [
+  {
+    'ruta' : '/',
+    'nombre' : 'Inicio'
+  },
+  {
+    'ruta' : '/comparador',
+    'nombre' : 'Comparador'
+  }
+];
+
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

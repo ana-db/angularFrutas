@@ -3,16 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComparadorFutasComponent } from './paginas/comparador-futas/comparador-futas.component';
 import { ComparadorComponent } from './paginas/comparador/comparador.component';
-import { InicioComponent } from './inicio/inicio/inicio.component';
+import { InicioComponent } from './paginas/inicio/inicio.component';
+import { NavbarComponent } from './componentes/navbar/navbar.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComparadorFutasComponent,
     ComparadorComponent,
-    InicioComponent
+    InicioComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

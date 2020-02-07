@@ -13,7 +13,7 @@ export class InicioComponent implements OnInit {
 
     console.trace('InicioComponent constructor');
 
-    this.title = "Frutas";
+    this.title = 'Frutas';
 
   } //fin constructor
 

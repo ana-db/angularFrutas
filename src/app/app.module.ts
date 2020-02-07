@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ComparadorFutasComponent } from './paginas/comparador-futas/comparador-futas.component';
+import { ComparadorComponent } from './paginas/comparador/comparador.component';
+import { InicioComponent } from './inicio/inicio/inicio.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ComparadorFutasComponent,
+    ComparadorComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ComparadorComponent } from './paginas/comparador/comparador.component';
 
 
-const routes: Routes = [];
+
+const routes: Routes = [
+  {path: 'comparador', component: ComparadorComponent},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

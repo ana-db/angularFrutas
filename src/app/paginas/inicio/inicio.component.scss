@@ -1,6 +1,10 @@
 //Variables SASS:
 $color_green:#009C6B;
 
+h1, h3{
+    color: $color_green;
+}
+
 .fruta {
     font-weight: bolder;
 }

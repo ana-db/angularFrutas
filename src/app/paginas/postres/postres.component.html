@@ -1,1 +1,38 @@
-<p>postres works!</p>
+<!--
+<p>{{idFruta}}</p>
+{{frutaSeleccionada | json}}
+-->
+
+<!-- {{frutaSeleccionada.postre | json}} -->
+
+<h3>Postre con {{frutaSeleccionada.nombre}}: {{frutaSeleccionada.nombrePostre}}</h3>
+
+<div class="row">
+
+    <div class="col-5 foto-postre">
+        <img src="{{frutaSeleccionada.fotoPostre}}" class="card-img-top"  alt="{{frutaSeleccionada.nombrePostre}}">
+    </div> <!-- class="col-5" -->
+
+    <div class="col-2">
+        <div class="ingredientes">
+            <p class="ingredientes-titulo">Ingredientes:</p> 
+            <ul class="list-group">
+                <li *ngFor="let ingrediente of frutaSeleccionada.ingredientesPostre" class="list-group-item">
+                    {{ingrediente}}
+                </li>
+            </ul>
+        </div>
+    </div> <!-- fin class="col-2" -->
+
+    <div class="col-5">
+        <div class="detalle-receta">
+            <h4 class="detalle-receta-nombre">{{frutaSeleccionada.nombrePostre}}</h4>
+            <p class="cocinero">Una receta de {{frutaSeleccionada.cocineroPostre}}</p> 
+            <div class="descripcion">{{frutaSeleccionada.recetaPostre}}</div>
+        </div>
+    </div> <!-- fin class="col-5" -->
+    
+
+</div> <!-- fin class row -->
+
+

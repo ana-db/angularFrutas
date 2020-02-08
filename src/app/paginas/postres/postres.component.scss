@@ -1,0 +1,63 @@
+//Variables SASS:
+$color_green:#009C6B;
+
+h3{
+    color: $color_green;
+    padding-bottom: 0.5rem;
+}
+
+.cocinero{
+    font-style: italic;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+ul{
+    padding: 5px;
+}
+
+.detalle-receta-nombre{
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: $color_green;
+    color: white;
+    padding-left: 0.5rem;
+    padding-bottom: 0.25rem;
+}
+
+.ingredientes-titulo{
+    font-size: 1rem;
+    background-color: $color_green;
+    color: white;
+    padding-left: 0.5rem;
+    padding-bottom: 0.25rem;
+}
+
+.detalle-receta, .foto-postre, .ingredientes{
+    border-color: $color_green;
+    border-style: solid;
+}
+
+.col-6 {
+    padding-left: 1.5rem;
+}
+
+.descripcion{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+//centramos la imagen dentro del div en 2 pasos:
+//(https://www.jose-aguilar.com/blog/centrar-una-imagen-vertical-horizontalmente-dentro-de-div/)
+.foto-postre {
+	width:600px;
+	height:400px;
+	line-height:400px;
+	margin:0px auto;
+	text-align:center;
+}
+ 
+.foto-postre img {
+	vertical-align:middle;
+}

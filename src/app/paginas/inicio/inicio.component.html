@@ -1,2 +1,69 @@
 <h1>{{title}}</h1> 
-juhgfdxsdhjm,mnfvc
+
+<div class="row mb-3">
+
+    <div class="col">
+        <a href="#">Añadir una fruta nueva</a>
+    </div>
+
+    <!-- BUSCADOR -->
+    <div class="col"> 
+            
+        <div class="input-group">
+            <input type="search" class="form-control" placeholder="Busca una fruta por nombre, clasificacion o vitaminas">
+            <div class="input-group-append"><span class="input-group-text"><span class="fas fa-search"></span></span></div>            
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- LISTADO Y DETALLE DE LAS FRUTAS -->
+<div class="row">
+
+    <!-- listado -->
+    <div class="col-4">
+        <h3>Frutas</h3>
+        <ul class="list-group">
+            <li *ngFor="let fruta of frutas " 
+                (click)="seleccionarFruta(fruta)" 
+                class="list-group-item {{fruta==frutaSeleccionada ? 'active' :'' }}">
+                    <p class="fruta">{{fruta.nombre}}</p> 
+                    <p class="clasificacion text-muted">{{fruta.clasificacion}}</p>
+                </li>
+        </ul>
+    </div> <!-- class="col-4" -->
+
+
+    <!-- detalle -->
+    <div class="col-8">
+
+        <div class="detalle-fruta">
+            <h3 class="detalle-fruta-nombre">{{frutaSeleccionada.nombre}}</h3>
+
+            <div class="row">
+
+                <div class="col-6">
+                    <img src="{{frutaSeleccionada.foto}}" class="card-img-top" alt="{{frutaSeleccionada.nombre}}">
+                    <p class="fruta text-right">Casificacion: {{frutaSeleccionada.clasificacion}}</p>
+                </div> <!-- fin class="col-6" -->
+
+                <div class="col-6">
+                    <p>Minerales principales:</p> 
+                        <ul class="list-group">
+                            <li *ngFor="let mineral of frutaSeleccionada.minerales" class="list-group-item">
+                                {{mineral}}
+                            </li>
+                        </ul>
+                </div> <!-- fin class="col-6" -->
+
+            </div> <!-- fin class row dentro de class col-8 -->
+
+            <p class="descripcion">{{frutaSeleccionada.descripcion}}</p>
+
+        </div> <!-- fin class detalle-fruta -->
+
+    </div> <!-- fin class col-8 -->
+
+</div> <!-- fin class row -->

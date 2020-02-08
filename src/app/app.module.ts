@@ -8,6 +8,7 @@ import { ComparadorComponent } from './paginas/comparador/comparador.component';
 import { InicioComponent } from './paginas/inicio/inicio.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { FrutasPipe } from './pipes/frutas.pipe';
+import { PostresComponent } from './paginas/postres/postres.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FrutasPipe } from './pipes/frutas.pipe';
     ComparadorComponent,
     InicioComponent,
     NavbarComponent,
-    FrutasPipe
+    FrutasPipe,
+    PostresComponent
   ],
   imports: [
     BrowserModule,

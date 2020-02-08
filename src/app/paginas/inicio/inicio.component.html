@@ -10,7 +10,7 @@
     <div class="col"> 
             
         <div class="input-group">
-            <input type="search" class="form-control" placeholder="Busca una fruta por nombre, clasificacion o vitaminas">
+            <input type="search" class="form-control" [(ngModel)]="busqueda" placeholder="Busca una fruta por nombre, clasificacion o vitaminas">
             <div class="input-group-append"><span class="input-group-text"><span class="fas fa-search"></span></span></div>            
         </div>
 
@@ -26,7 +26,7 @@
     <div class="col-4">
         <h3>Frutas</h3>
         <ul class="list-group">
-            <li *ngFor="let fruta of frutas " 
+            <li *ngFor="let fruta of frutas | frutasFiltro : busqueda " 
                 (click)="seleccionarFruta(fruta)" 
                 class="list-group-item {{fruta==frutaSeleccionada ? 'active' :'' }}">
                     <p class="fruta">{{fruta.nombre}}</p> 
